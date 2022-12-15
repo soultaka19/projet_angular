@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let un_livre of liste" class="col-md-4 mt-3">
+            <div  class="card p-2">
+                <div class="card-title">
+                    <h4>{{un_livre.titre }} </h4>
+
+                    <h5>
+                        prix:{{un_livre.prix}}
+
+                        <a [routerLink]="['/edit',un_livre.id_livre]" class="btn btn-primary me-2">
+                            modifier
+                        </a>
+
+                        <a [routerLink]="['/delete',un_livre.id_livre]" class="btn btn-danger me-2">
+                            supprimer
+                        </a>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <img [src]="backend_path+un_livre.image_url" alt="img" class="w-50">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

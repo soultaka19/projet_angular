@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>liste des etudiants</h2>
+    <ul >
+        <li *ngFor="let etudiant of liste_etudiants">
+            {{etudiant.nom +" "+ etudiant.prenom}} <br>
+            {{etudiant.age +" ans"}}
+            <h4> note:{{etudiant.notes}}</h4>
+            <p>telephone:{{etudiant.tel.indicatif + etudiant.tel.tel}}</p>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-6">
+            <form >
+                <div class="form-group mt-3">
+                    <label for="nom">nom:</label>
+                    <input type="text" class="form-control" id="nom"  [(ngModel)]="etudiants.nom" name="nom"
+                        #name="ngModel">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="prenom">prenom:</label>
+                    <input type="text" class="form-control" id="prenom"  [(ngModel)]="etudiants.prenom"
+                        name="prenom">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="age">age:</label>
+                    <input type="number" class="form-control" id="age"  [(ngModel)]="etudiants.age" name="age">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="notes">note:</label>
+                    <input type="number" class="form-control" id="notes"  [(ngModel)]="etudiants.notes"
+                        name="notes">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="indicatif">indicatif:</label>
+                    <input type="text" class="form-control" id="indicatif"  [(ngModel)]="etudiants.tel.indicatif"
+                        name="notes">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="tel">tel:</label>
+                    <input type="text" class="form-control" id="tel"  [(ngModel)]="etudiants.tel.tel" name="tel">
+                </div>
+
+                <button type="button" class="btn btn-default" (click)="newEtudiant()" >New Etudiant</button>
+            </form>
+        </div>
+    </div>    
+</div>

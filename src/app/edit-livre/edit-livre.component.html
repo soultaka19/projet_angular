@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let un_livre of les_livres" class="col-ofsset-3 col-md-6">
+            <form action="">
+                
+                <div class="mb-3">
+                    <label for="titre">titre</label>
+                    <input type="text" name="titre" [(ngModel)]="un_livre.titre" id="titre" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="pris">prix</label>
+                    <input type="number" name="prix" [(ngModel)]="un_livre.prix" id="prix"  class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="image">image</label>
+                    <input type="text" name="image_url" [(ngModel)]="un_livre.image_url" id="image_url" class="form-control">
+                </div>
+                <button (click)="modifier()" class="btn btn-primary">modifier</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+

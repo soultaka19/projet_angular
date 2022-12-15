@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-ofsset-3 col-md-6">
+            <form action="">
+                
+                <div class="mb-3">
+                    <label for="titre">titre</label>
+                    <input type="text" name="titre" [(ngModel)]="new_livre.titre" id="titre" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="pris">prix</label>
+                    <input type="number" name="prix" [(ngModel)]="new_livre.prix" id="prix"  class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="image">image</label>
+                    <input type="text" name="image_url" [(ngModel)]="new_livre.image_url" id="image_url" class="form-control">
+                </div>
+            </form>
+            
+            <button (click)="ajouter()" class="btn btn-primary">ajouter</button>
+        </div>
+    </div>
+</div>
